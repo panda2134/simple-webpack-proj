@@ -1,3 +1,6 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { ProgressPlugin } = require('webpack')
+
 module.exports = {
   mode: 'production',
   module: {
@@ -26,5 +29,12 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      scriptLoading: 'blocking'
+    }),
+    new ProgressPlugin()
+  ]
 }
