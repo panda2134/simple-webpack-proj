@@ -1,5 +1,6 @@
 import confetti from 'canvas-confetti'
 import delay from 'delay'
+import './assets/main.css'
 
 async function main() {
 	const hint = document.getElementById('hint')
